@@ -1,0 +1,608 @@
+﻿body {
+    width: 100%;
+    margin: 0px;
+    background-image: url('../Images/LOGIN_BG.jpg');
+}
+
+.f-row {
+    display: flex;
+    justify-content: center;
+}
+
+.w-70 {
+    width: 70%;
+    margin: auto;
+    margin-top: 45px;
+}
+
+.w-80 {
+    width: 80%;
+    margin: auto;
+    margin-top: 45px;
+}
+
+.inl-h {
+    display: inline;
+    color: #eee;
+    font-family: arial;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.con1, .frnt1, .con2, .frnt2, .con3, .frnt3, .con4, .frnt4 {
+    backface-visibility: hidden;
+}
+
+.bma {
+    font-size: 1.2em;
+    color: #333;
+    text-decoration: none;
+    margin: auto;
+    height: 50px;
+}
+
+button {
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: background 250ms ease-in-out, transform 150ms ease;
+}
+
+    button:hover, button:focus {
+        background: #333;
+        color: #eee;
+    }
+
+    button:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    button:active {
+        transform: scale(0.99);
+    }
+
+.forbg {
+    background: #eee;
+    border-radius: 5px;
+    width: 45%;
+    margin: auto;
+    margin-top: 75px;
+}
+
+.forbg1 {
+    width: 30%;
+}
+
+.con1, .con2, .con3, .con4 {
+    transition: transform, 0.1s;
+    transform: rotateY(180deg);
+}
+
+.inp {
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+
+    .inp:focus {
+        outline: none;
+        box-shadow: 0 0 2px 1px #6699ff;
+    }
+
+    .inp::placeholder {
+        padding-left: 5px;
+    }
+
+.btn-out {
+    border: 2px solid #333;
+    background: transparent;
+}
+
+.btn-med-dark {
+    background: #ddd;
+    color: #333;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px #aaa;
+}
+
+    .btn-med-dark:hover {
+        background: #666;
+        color: #eee;
+    }
+
+.row {
+    display: block;
+    width: 100%;
+    height: 250px;
+}
+
+.col {
+    display: inline-block;
+}
+
+.col-l {
+    float: left;
+}
+
+.col-r {
+    float: right;
+}
+
+.tilee1 {
+    background-color: #f52c2c;
+}
+
+.tilee2 {
+    background-color: #5a2787;
+}
+
+.tilee3 {
+    background-color: #1b72bf;
+}
+
+.tilee4 {
+    background-color: #ff8b26;
+}
+
+.tilee1, .tilee2 {
+    position: relative;
+    width: 35%;
+    margin: 50px 7%;
+    height: 150px;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.tilee3, .tilee4 {
+    position: relative;
+    width: 35%;
+    margin: 50px 7%;
+    height: 150px;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.d-none {
+    display: none;
+}
+
+.zz {
+    z-index: 999;
+}
+
+.animfLT {
+    animation: expandFlipLT 0.5s linear;
+    animation-fill-mode: forwards;
+    transform-style: preserve-3d;
+}
+
+.animbLT {
+    animation: shrinkFlipLT 0.5s linear;
+    transform-style: preserve-3d;
+}
+
+.animfRT {
+    animation: expandFlipRT 0.5s linear;
+    animation-fill-mode: forwards;
+    transform-style: preserve-3d;
+}
+
+.animbRT {
+    animation: shrinkFlipRT 0.5s linear;
+    transform-style: preserve-3d;
+}
+
+.animfLB {
+    animation: expandFlipLB 0.5s linear;
+    animation-fill-mode: forwards;
+    transform-style: preserve-3d;
+}
+
+.animbLB {
+    animation: shrinkFlipLB 0.5s linear;
+    transform-style: preserve-3d;
+}
+
+.animfRB {
+    animation: expandFlipRB 0.5s linear;
+    animation-fill-mode: forwards;
+    transform-style: preserve-3d;
+}
+
+.animbRB {
+    animation: shrinkFlipRB 0.5s linear;
+    transform-style: preserve-3d;
+}
+
+@keyframes expandFlipLT {
+    0% {
+        position: absolute;
+        width: 35%;
+        top: 20%;
+        height: 150px;
+    }
+
+    100% {
+        position: fixed;
+        top: 20%;
+        left: 5%;
+        width: 91%;
+        margin: 0%;
+        height: 71%;
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes shrinkFlipLT {
+    0% {
+        position: fixed;
+        top: 20%;
+        left: 5%;
+        width: 91%;
+        margin: 0%;
+        height: 72%;
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        position: absolute;
+        width: 35%;
+        top: 20%;
+        height: 150px;
+    }
+}
+
+@keyframes expandFlipRT {
+    0% {
+        position: absolute;
+        width: 35%;
+        top: 20%;
+        height: 150px;
+    }
+
+    100% {
+        position: fixed;
+        top: 20%;
+        left: 5%;
+        width: 91%;
+        margin: 0%;
+        height: 71%;
+        transform: rotateY(-180deg);
+    }
+}
+
+@keyframes shrinkFlipRT {
+    0% {
+        position: fixed;
+        top: 20%;
+        left: 5%;
+        width: 91%;
+        margin: 0%;
+        height: 71%;
+        transform: rotateY(-180deg);
+    }
+
+    100% {
+        position: absolute;
+        width: 35%;
+        top: 20%;
+        height: 150px;
+        right: 0;
+    }
+}
+
+@keyframes expandFlipLB {
+    0% {
+        position: absolute;
+        width: 35%;
+        height: 150px;
+    }
+
+    100% {
+        position: fixed;
+        top: 20%;
+        left: 5%;
+        width: 91%;
+        margin: 0%;
+        height: 71%;
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes shrinkFlipLB {
+    0% {
+        position: fixed;
+        top: 20%;
+        left: 5%;
+        width: 91%;
+        margin: 0%;
+        height: 71%;
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        position: absolute;
+        width: 35%;
+        height: 150px;
+    }
+}
+
+@keyframes expandFlipRB {
+    0% {
+        position: absolute;
+        width: 35%;
+        height: 150px;
+    }
+
+    100% {
+        position: fixed;
+        top: 20%;
+        right: 5%;
+        width: 91%;
+        margin: 0%;
+        height: 71%;
+        transform: rotateY(-180deg);
+    }
+}
+
+@keyframes shrinkFlipRB {
+    0% {
+        position: fixed;
+        top: 20%;
+        right: 5%;
+        width: 91%;
+        margin: 0%;
+        height: 71%;
+        transform: rotateY(-180deg);
+    }
+
+    100% {
+        position: absolute;
+        width: 35%;
+        right: 0%;
+        height: 150px;
+    }
+}
+
+
+
+/*Issue Challan*/
+
+
+.body {
+    background: url("../Images/LOGIN_BG.jpg");
+}
+
+.loginBox {
+    overflow-y: scroll;
+    position: absolute;
+    margin-top: 20%;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    height: 365px;
+    padding: 80px 40px 20px 40px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,.5);
+    font-family: sans-serif;
+    border-radius: 25px;
+}
+
+    .loginBox::-webkit-scrollbar {
+        display: none;
+    }
+
+.user {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: calc(-100px/2);
+    left: calc(50% - 60px);
+    background-color: white;
+}
+
+h2 {
+    margin: 0;
+    padding: 0 0 30px;
+    color: #efed40;
+    text-align: center;
+}
+
+.loginBox p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: #fff;
+}
+
+.inp {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.loginBox input[type="text"],
+.loginBox input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+::placeholder {
+    color: rgba(255,255,255,.5);
+}
+
+.loginBox input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    background: #ff267e;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+    .loginBox input[type="submit"]:hover {
+        background: #efed40;
+        color: #262626;
+    }
+
+.loginBox a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.date {
+    height: 19px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+    .date::-webkit-inner-spin-button, .date::-webkit-clear-button {
+        display: none;
+    }
+
+.age {
+    width: 40%;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+#selectCSS {
+    width: 65%;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+#optionGender {
+    color: #262626;
+    background-color: #26262613
+}
+
+/*style1*/
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 15px;
+}
+
+.nav-list-item {
+    float: right;
+}
+
+    .nav-list-item a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+.time {
+    float: left;
+    color: white;
+    padding: 12px 0px 0px 10px;
+}
+
+.nav-list-item a:hover {
+    background-color: #111;
+}
+
+
+#time_display {
+    column-count: 3;
+    column-gap: 40 px;
+    column-width: auto;
+    column-rule: 1px solid green;
+    column-span: 2;
+}
+
+body {
+    background-image: url("C:\Users\allok\Desktop\app.jpg");
+}
+
+.footer {
+    overflow: hidden;
+    min-height: 50px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: left;
+    padding: 10px 0px;
+    border-radius: 15px;
+}
+
+.footer-links {
+    color: #9e9e9e !important;
+}
+
+.footer-copyright-links {
+    color: #9e9e9e !important;
+    float: right !important;
+    padding-top: 5px;
+}
+
+.fa {
+    padding: 7px 18px 18px 8px;
+    width: 3px;
+    height: 3px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+.fa-google {
+    background: rgb(216, 45, 45);
+    color: white;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}

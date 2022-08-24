@@ -1,0 +1,39 @@
+﻿.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 15px;
+}
+
+.nav-list-item {
+    float: right;
+}
+
+    .nav-list-item a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+.time {
+    float: left;
+    color: white;
+    padding: 12px 0px 0px 10px;
+}
+
+.nav-list-item a:hover {
+    background-color: #111;
+}
+
+
+#time_display {
+    column-count: 3;
+    column-gap: 40 px;
+    column-width: auto;
+    column-rule: 1px solid green;
+    column-span: 2;
+}

@@ -1,0 +1,13 @@
+﻿
+#wel {
+    width: 200px;
+    height: 3px;
+    color: red;
+    background-color: red;
+    border: none;
+    border-radius: 25px;
+}
+
+#welcome {
+    font-size: 20px;
+}
