@@ -7,10 +7,14 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using EChallan1.Web.Data;
 using EChallan1.Web.Models;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace EChallan1.Web.Areas.User1.Controllers
 {
+    //[Authorize(Roles = "Appuser")]
     [Area("User1")]
+    [Authorize]
     public class CustomersController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -67,7 +71,8 @@ namespace EChallan1.Web.Areas.User1.Controllers
             {
                 _context.Add(customer);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                //return RedirectToAction("Details",);
+                return RedirectToAction("Details", new { id = customer.Customerid });
             }
             return View(customer);
         }

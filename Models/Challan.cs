@@ -9,6 +9,7 @@ namespace EChallan1.Web.Models
     [Table(name: "Challans")]
     public class Challan
     {
+        
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ChallanID { get; set; }

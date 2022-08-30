@@ -7,10 +7,14 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using EChallan1.Web.Data;
 using EChallan1.Web.Models;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace EChallan1.Web.Areas.User1.Controllers
 {
     [Area("User1")]
+    [Authorize]
+    //[Authorize(Roles = "AppAdmin")]
     public class ChallanDetailsController : Controller
     {
         private readonly ApplicationDbContext _context;

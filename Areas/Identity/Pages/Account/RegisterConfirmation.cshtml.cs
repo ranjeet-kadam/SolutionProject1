@@ -13,12 +13,19 @@ namespace EChallan1.Web.Areas.Identity.Pages.Account
     public class RegisterConfirmationModel : PageModel
     {
         private readonly UserManager<IdentityUser> _userManager;
-        private readonly IEmailSender _sender;
+        // private readonly IEmailSender _sender;
 
-        public RegisterConfirmationModel(UserManager<IdentityUser> userManager, IEmailSender sender)
+        //public RegisterConfirmationModel(UserManager<IdentityUser> userManager, IEmailSender sender)
+        // NOTE: IEmailSender Service is currently not registered.  Hence, commented out.
+        //       Once an IEmailSender Service is registered, please uncomment the dependency registration lines.
+        // private readonly IEmailSender _sender;
+
+        public RegisterConfirmationModel(
+            // IEmailSender sender,
+            UserManager<IdentityUser> userManager)
         {
             _userManager = userManager;
-            _sender = sender;
+          //  _sender = sender;
         }
 
         public string Email { get; set; }
